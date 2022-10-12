@@ -31,7 +31,7 @@ class Product {
             // Simplement mon for each va boucler sur mon tableau et crée des key pour chaque champs, ce qui donnera
             // setId, setTitle, setContent, setDate
             if (method_exists($this, $method)) {
-                $this->method($value);
+                $this->$method($value);
             }
         }
     }
@@ -70,5 +70,19 @@ class Product {
 
 
     // *********************** Getters *******************
-    
+    public function id() {
+        return $this->_id;
+    }
+
+    public function title() {
+        return $this->_title;
+    }
+
+    public function content() {
+        return $this->_content;
+    }
+
+    public function date() {
+        return $this->_date;
+    }
 }

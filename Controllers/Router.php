@@ -1,8 +1,5 @@
 <?php
 
-// Mon router qui va s'occuper de mes classes
-
-
 class Router {
     // Derterminer quel controlleur je veux
     private $ctrl;
