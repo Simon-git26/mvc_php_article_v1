@@ -46,7 +46,7 @@ class Router {
 
         } catch (\Exception $e) {
             $errorMsg = $e->getMessage();
-            require_once('Views/viewError.php');
+            //require_once('Views/viewError.php');
         }
     }
 }

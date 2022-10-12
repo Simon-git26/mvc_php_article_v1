@@ -8,7 +8,7 @@ abstract class Model {
 
     // Connexion a la BDD
     private static function setBdd() {
-        self::$_bdd = new PDO('mysql:host=localhost;dbname=architecture_mvc_php;charset=utf8', 'root', '');
+        self::$_bdd = new PDO('mysql:host=localhost;dbname=architecture_mvc_php;charset=utf8', 'root', 'root');
         
         // utilise les constante PDO pour gerer les erreurs
         self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
@@ -34,7 +34,7 @@ abstract class Model {
         $var = [];
 
         // Petite protection contre les injection sql
-        $request = self::$_bdd->prepare('SELECT * FROM' .$table. 'ORDER BY id desc');
+        $request = self::$_bdd->prepare('SELECT * FROM ' .$table. ' ORDER BY id desc');
         $request->execute();
 
         // Je créer une variable data qui va contenir mes données récupéré
