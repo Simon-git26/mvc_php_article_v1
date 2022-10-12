@@ -1,10 +1,10 @@
 <?php
 
 // Créer ma classe parent, classe qui va affecter les autres class + methode communes aux autres models
-// 
 
 abstract class Model {
     private static $_bdd;
+
 
     // Connexion a la BDD
     private static function setBdd() {
@@ -15,6 +15,7 @@ abstract class Model {
     }
 
 
+
     // créer une fonction de connexion par defaut a la bdd car si on est connecté alors OK sinon nous connecté avec notre function setBdd()
     protected function getBdd() {
         if (self::$_bdd == null) {
@@ -23,6 +24,7 @@ abstract class Model {
             return self::$_bdd;
         }
     }
+
 
 
     // creation de la methode de recuperation d'elements en bdd
