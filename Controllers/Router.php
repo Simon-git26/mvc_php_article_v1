@@ -6,7 +6,7 @@
 class Router {
     // Derterminer quel controlleur je veux
     private $ctrl;
-    // et quelle view je veux
+    // et quel view je veux
     private $view;
 
 

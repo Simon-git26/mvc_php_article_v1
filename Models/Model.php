@@ -40,6 +40,7 @@ abstract class Model {
         // Je créer une variable data qui va contenir mes données récupéré
         while ($data = $request->fetch(PDO::FETCH_ASSOC)) {
             // var contiendra les données sous forme d'objets
+            // J'instancie les objet passé en parametre $data qui sont simplement un résultat de ce que j'ai récupérer dans la BDD
             $var[] = new $obj($data);
         }
 

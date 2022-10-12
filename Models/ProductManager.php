@@ -7,6 +7,8 @@ class ProductManager extends Model {
         // Vue que ma class ProductManager est un heritage de ma classe Abstraite Model
         // je peux tout à fait utiliser les methodes de Model meme s'il sont en protected
         // Et lui passer les bon parametres
-        return $this->getAll('articles', 'Article');
+
+        // Le fait d'instancier mon objet passé en param dans Model, est qu'ici je créer une class Product qui contient mes données et que je pourrais rappeler dans Product.php
+        return $this->getAll('articles', 'Product');
     }
 }
