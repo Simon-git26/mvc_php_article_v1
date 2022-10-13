@@ -1,10 +1,13 @@
 <?php
 
+// require ma class View
+require_once 'Views/View.php';
+
 class Router {
     // Derterminer quel controlleur je veux
     private $ctrl;
     // et quel view je veux
-    private $view;
+    private $_view;
 
 
     public function routeRequest() {
@@ -46,7 +49,11 @@ class Router {
 
         } catch (\Exception $e) {
             $errorMsg = $e->getMessage();
-            //require_once('Views/viewError.php');
+            // Recuperer de facon sécuriser ma view pour afficher l'erreur
+            // En initialisant une instance de class View, je lui passe string Error, et donc grace à ma class view, ceci sera appliquer $this->_file = 'Views/view'.$action.'.php';
+            $this->_view = new View('Error');
+            $this->_view->generate(array('errorMsg' => $errorMsg));
+            
         }
     }
 }
