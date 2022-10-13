@@ -9,40 +9,7 @@ foreach ($products as $product):
 <?php endforeach ?>
 
 
-<!DOCTYPE html>
-<html>
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>
-    TripBiz
-  </title>
-
-  <!-- range selctor slider style -->
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css" />
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-</head>
-
-<body>
-  <div class="hero_area">
     
     <!-- slider section -->
     <section class=" slider_section ">
@@ -65,7 +32,7 @@ foreach ($products as $product):
                   <div class="img-box">
                     <div class="play_btn">
                       <a href="">
-                        <img src="images/play.png" alt="">
+                        <img src="public/images/play.png" alt="">
                       </a>
                     </div>
                     </a>
@@ -94,7 +61,7 @@ foreach ($products as $product):
                   <div class="img-box">
                     <div class="play_btn">
                       <a href="">
-                        <img src="images/play.png" alt="">
+                        <img src="public/play.png" alt="">
                       </a>
                     </div>
                     </a>
@@ -123,7 +90,7 @@ foreach ($products as $product):
                   <div class="img-box">
                     <div class="play_btn">
                       <a href="">
-                        <img src="images/play.png" alt="">
+                        <img src="public/play.png" alt="">
                       </a>
                     </div>
                     </a>
@@ -168,7 +135,7 @@ foreach ($products as $product):
     <div class="container ">
       <div class="box container-bg">
         <div class="img-box">
-          <img src="images/form-img.png" alt="">
+          <img src="public/form-img.png" alt="">
         </div>
         <div class="form_container">
           <form>
@@ -176,7 +143,7 @@ foreach ($products as $product):
               <div class="input-group ">
                 <div class="input-group-prepend">
                   <div class="input-group-text">
-                    <img src="images/location.png" alt="">
+                    <img src="public/location.png" alt="">
                   </div>
                 </div>
                 <input type="text" class="form-control" id="inputDestination" placeholder="Where You Want Go? ">
@@ -186,7 +153,7 @@ foreach ($products as $product):
               <div class="input-group ">
                 <div class="input-group-prepend">
                   <div class="input-group-text">
-                    <img src="images/location.png" alt="">
+                    <img src="public/location.png" alt="">
                   </div>
                 </div>
                 <input type="text" class="form-control" id="inputLocation" placeholder="All Locations">
@@ -196,7 +163,7 @@ foreach ($products as $product):
               <div class="input-group ">
                 <div class="input-group-prepend">
                   <div class="input-group-text">
-                    <img src="images/language.png" alt="">
+                    <img src="public/language.png" alt="">
                   </div>
                 </div>
                 <select id="inputLanguage" class="form-control">
@@ -205,7 +172,7 @@ foreach ($products as $product):
                 </select>
                 <div class="input-group-append">
                   <div class="input-group-text">
-                    <img src="images/down-arrow.png" alt="">
+                    <img src="public/down-arrow.png" alt="">
                   </div>
                 </div>
               </div>
@@ -215,7 +182,7 @@ foreach ($products as $product):
               <div class="input-group ">
                 <div class="input-group-prepend">
                   <div class="input-group-text">
-                    <img src="images/earth.png" alt="">
+                    <img src="public/earth.png" alt="">
                   </div>
                 </div>
                 <input type="text" class="form-control" id="inputLocation" placeholder="All Tour Type">
@@ -258,7 +225,7 @@ foreach ($products as $product):
     <div class="container">
       <div class="box container-bg">
         <div class="img-box">
-          <img src="images/package-img.png" alt="">
+          <img src="public/package-img.png" alt="">
         </div>
         <div class="detail-container">
           <div class="detail-box">
@@ -340,8 +307,8 @@ foreach ($products as $product):
       <div class="box container-bg">
         <div class="detail-box">
           <div class="img-box">
-            <img src="images/s-1.png" alt="" class="img1">
-            <img src="images/s-1-blue.png" alt="" class="img2">
+            <img src="public/s-1.png" alt="" class="img1">
+            <img src="public/s-1-blue.png" alt="" class="img2">
           </div>
           <div class="text-box">
             <h6>
@@ -354,8 +321,8 @@ foreach ($products as $product):
         </div>
         <div class="detail-box">
           <div class="img-box">
-            <img src="images/s-2.png" alt="" class="img1">
-            <img src="images/s-2-blue.png" alt="" class="img2">
+            <img src="public/s-2.png" alt="" class="img1">
+            <img src="public/s-2-blue.png" alt="" class="img2">
           </div>
           <div class="text-box">
             <h6>
@@ -368,8 +335,8 @@ foreach ($products as $product):
         </div>
         <div class="detail-box">
           <div class="img-box">
-            <img src="images/s-3.png" alt="" class="img1">
-            <img src="images/s-3-blue.png" alt="" class="img2">
+            <img src="public/s-3.png" alt="" class="img1">
+            <img src="public/s-3-blue.png" alt="" class="img2">
           </div>
           <div class="text-box">
             <h6>
@@ -414,7 +381,7 @@ foreach ($products as $product):
           </div>
           <div class="detail-box">
             <div class="img-box">
-              <img src="images/b-1.jpg" alt="">
+              <img src="public/b-1.jpg" alt="">
             </div>
             <div class="text-box">
               <h5>
@@ -441,7 +408,7 @@ foreach ($products as $product):
             </div>
             <div class="detail-box">
               <div class="img-box">
-                <img src="images/b-2.jpg" alt="">
+                <img src="public/b-2.jpg" alt="">
               </div>
               <div class="text-box">
                 <h5>
@@ -467,7 +434,7 @@ foreach ($products as $product):
             </div>
             <div class="detail-box">
               <div class="img-box">
-                <img src="images/b-4.jpg" alt="">
+                <img src="public/b-4.jpg" alt="">
               </div>
               <div class="text-box">
                 <h5>
@@ -494,7 +461,7 @@ foreach ($products as $product):
           </div>
           <div class="detail-box">
             <div class="img-box">
-              <img src="images/b-3.jpg" alt="">
+              <img src="public/b-3.jpg" alt="">
             </div>
             <div class="text-box">
               <h5>
@@ -536,7 +503,7 @@ foreach ($products as $product):
           <div class="carousel-item active">
             <div class="box ">
               <div class="img-box">
-                <img src="images/client.png" alt="">
+                <img src="public/client.png" alt="">
               </div>
               <div class="detail-box">
                 <h2>
@@ -551,7 +518,7 @@ foreach ($products as $product):
           <div class="carousel-item">
             <div class="box ">
               <div class="img-box">
-                <img src="images/client.png" alt="">
+                <img src="public/client.png" alt="">
               </div>
               <div class="detail-box">
                 <h2>
@@ -566,7 +533,7 @@ foreach ($products as $product):
           <div class="carousel-item">
             <div class="box ">
               <div class="img-box">
-                <img src="images/client.png" alt="">
+                <img src="public/client.png" alt="">
               </div>
               <div class="detail-box">
                 <h2>
@@ -614,22 +581,22 @@ foreach ($products as $product):
           <div class="info_social">
             <div>
               <a href="">
-                <img src="images/facebook-logo-button.png" alt="">
+                <img src="public/facebook-logo-button.png" alt="">
               </a>
             </div>
             <div>
               <a href="">
-                <img src="images/twitter-logo-button.png" alt="">
+                <img src="public/twitter-logo-button.png" alt="">
               </a>
             </div>
             <div>
               <a href="">
-                <img src="images/linkedin.png" alt="">
+                <img src="public/linkedin.png" alt="">
               </a>
             </div>
             <div>
               <a href="">
-                <img src="images/instagram.png" alt="">
+                <img src="public/instagram.png" alt="">
               </a>
             </div>
           </div>
@@ -692,15 +659,15 @@ foreach ($products as $product):
             </h5>
             <div class="info_link-box">
               <a href="">
-                <img src="images/location2.png" alt="">
+                <img src="public/location2.png" alt="">
                 <span> Passages of Lorem Ipsum available</span>
               </a>
               <a href="">
-                <img src="images/call.png" alt="">
+                <img src="public/call.png" alt="">
                 <span>Call : +01234567890</span>
               </a>
               <a href="">
-                <img src="images/mail.png" alt="">
+                <img src="public/mail.png" alt="">
                 <span> demo@gmail.com</span>
               </a>
             </div>
@@ -715,8 +682,8 @@ foreach ($products as $product):
 
 
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="public/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="public/js/bootstrap.js"></script>
 
   <!-- range selector slider script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
