@@ -10,8 +10,9 @@ class ControllerHome {
     private $_view;
 
 
+    // $url est fournis par le Router, donc si j'ai une url ET superieur a 1 alors qu'il devrait etre en page accueil alors retourner une erreur
+    // car si url = 1 c'est que il y a 1 parametre et que ca doit etre Home
     public function __construct() {
-        // url fournis par router, donc si j'ai une url et superieur a 1 alors qu'il devrait etre en page accueil alors retourner une erreur
         if (isset($url) && count($url) > 1) {
             throw new \Exception("Page introuvable", 1);
         } else {
@@ -20,15 +21,17 @@ class ControllerHome {
     }
 
 
+    // Recuperer mes articles et les placer dans la variable $products
+    // Utiliser la method getProducts qui vient de ProductManager car j'ai instancié la classe
+
+    // Ensuite, recuperer de facon sécuriser ma view pour afficher l'erreur
+    // En initialisant une instance de class View, je lui passe string Home, et donc grâce à ma class View, 
+    // ceci sera appliquer $this->_file = 'Views/view'.$action.'.php';
     private function products() {
         $this->_productManager = new ProductManager();
 
-        // recuperer mes articles et les placer dans la variable $products
-        // getProducts vient de ProductManager car j'ai instancié l'objet
         $products = $this->_productManager->getProducts();
 
-        // Recuperer de facon sécuriser ma view pour afficher l'erreur
-        // En initialisant une instance de class View, je lui passe string Error, et donc grace à ma class view, ceci sera appliquer $this->_file = 'Views/view'.$action.'.php';
         $this->_view = new View('Home');
         $this->_view->generate(array('products' => $products));
     }

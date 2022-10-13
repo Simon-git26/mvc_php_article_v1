@@ -1,7 +1,7 @@
 <?php
 
 
-// Le nom de cette classe n'est pas aléatoire, elle vient simplement de mon ProductManager.php, classe que j'ai instancer dans le getAll qui vient de Model
+// Le nom de cette classe n'est pas aléatoire, elle vient simplement de mon ProductManager.php, classe que j'ai instancée dans le getAll qui vient de Model
 class Product {
     // Avoir les memes noms que mes champs dans la bdd et passé mes attributs en privée
     private $_id;
@@ -9,11 +9,13 @@ class Product {
     private $_content;
     private $_date;
 
+
     // @param $data qui contient mes données BDD et qui a était instancer dans Model->getAll
+    // Hydratation des données
     public function __construct(array $data) {
-        // Hydratation des données
         $this->hydrate($data);
     }
+
 
 
     // exemple de mon objet $data
@@ -25,17 +27,20 @@ class Product {
     ]*/
 
     // function hydrate
+    // Simplement mon for each va boucler sur mon tableau et crée des key pour chaque champs, ce qui donnera
+    // setId, setTitle, setContent, setDate
+    // Et mettre la première lettre de chaque key en MAJ
     public function hydrate(array $data) {
         foreach ($data as $key => $value) {
             $method = 'set'.ucFirst($key);
-            // Simplement mon for each va boucler sur mon tableau et crée des key pour chaque champs, ce qui donnera
-            // setId, setTitle, setContent, setDate
+            
             if (method_exists($this, $method)) {
                 $this->$method($value);
             }
         }
     }
 
+    
     // *********************** Setters *******************
     // setter id
     public function setId($id) {

@@ -9,8 +9,8 @@ class View {
     private $_titre;
 
     // action sera le nom de la view à envoyer
+    /* ex: si ma view est viewHome alors j'appelle l'$action qui sera 'Views/view'.$action.'.php' == 'Views/viewHome.php */
     function __construct($action){
-        /* ex: si ma view est viewHome alors j'appelle l'$action qui sera 'Views/view'.$action.'.php' == 'Views/viewHome.php */
         $this->_file = 'Views/view'.$action.'.php';
     }
 
@@ -22,7 +22,6 @@ class View {
     // generateFile() = en @param elle va envoyer le fichier de la view à afficher mais aussi donc $data = les données récuperé de la BDD
     // Mise en place de mon template
     // Affiche ma view avec l'echo une fois qu'elle à était définis
-
     public function generate($data) {
         $content = $this->generateFile($this->_file, $data);
         // Template
@@ -40,7 +39,6 @@ class View {
     // je ferme la mémoire tampon   return ob_get_clean();
 
     // sinon = message erreur
-
     private function generateFile($file, $data) {
         if (file_exists($file)) {
             extract($data);
