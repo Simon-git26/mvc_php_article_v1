@@ -7,7 +7,7 @@ class ControllerHome {
     private $_view;
 
 
-    public function __construct($url) {
+    public function __construct() {
         // url fournis par router, donc si j'ai une url et superieur a 1 alors qu'il devrait etre en page accueil alors retourner une erreur
         if (isset($url) && count($url) > 1) {
             throw new \Exception("Page introuvable", 1);
