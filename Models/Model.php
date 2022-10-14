@@ -43,4 +43,28 @@ abstract class Model {
         return $var;
         $request->closeCursor();
     }
+
+
+
+
+    // Creation de la methode pour recuperer un article en fonction de son id 
+    // utiliser dans ControllerPost
+
+    // Requete dynamique donc petite protection contre les injection sql, je la prepare puis l'execute
+    // Je crée une var $data qui va contenir mes données récupérer SOUS FORME D'OBJET
+    // J'instancie les objets passés en paramètre $data qui sont simplement un résultat de ce que j'ai récupéré dans la BDD
+    protected function getOnePost($table, $obj, $id) {
+        $this->getBdd();
+        $var = [];
+        
+        $request = self::$_bdd->prepare('SELECT id, title, content, date FROM ' .$table. ' ORDER BY id asc');
+        $request->execute();
+
+        // $data
+        while ($data = $request->fetch(PDO::FETCH_ASSOC)) {
+            $var[] = new $obj($data);
+        }
+        return $var;
+        $request->closeCursor();
+    }
 }
