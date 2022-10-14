@@ -31,7 +31,7 @@ class View {
 
 
 
-    // Créer la fonction qui va me permettre de definir le contenu à envoyer
+    // Créer la fonction qui va me permettre de definir le contenu à envoyer donc la view d'un article
     public function generatePost($data) {
         $content = $this->generateFile($this->_file, $data);
 
@@ -39,6 +39,20 @@ class View {
         $view = $this->generateFile('Views/template/templateSingle.php', array('titre' => $this->_titre, 'content' => $content));
         echo $view;
     }
+
+
+
+
+    // Créer la fonction qui permet d'afficher le form pour creation d'un post
+    public function generateForm() {
+        $content = $this->generateFileSimple($this->_file);
+
+        //template
+        $view = $this->generateFile('Views/template/templateForm.php', array('titre' => $this->_titre, 'content' => $content));
+        echo $view;
+    }
+
+
 
 
 
@@ -58,6 +72,18 @@ class View {
             require $file;
             return ob_get_clean();
 
+        } else {
+            throw new \Exception("Fichier ".$file." est introuvable", 1);
+        }
+    }
+
+
+
+
+    // Fonction qui envoie 
+    private function generateFileSimple($file) {
+        if (file_exists($file)) {
+            require $file;
         } else {
             throw new \Exception("Fichier ".$file." est introuvable", 1);
         }

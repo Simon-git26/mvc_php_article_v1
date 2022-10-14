@@ -22,9 +22,9 @@
 			<a href="#" class="logo"><img src="public/images/logo.png" alt="Logo Image"></a>
 			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
 			<ul class="main-menu visible-on-click" id="main-menu">
-				<li><a href="#">Home</a></li>
+				<li><a href="#">Accueil</a></li>
 				<li><a href="#">Categories</a></li>
-				<li><a href="#">Features</a></li>
+				<!--postécreate-->
 				<li><a href="post&create">Créer un article</a></li>
 			</ul><!-- main-menu -->
 
@@ -55,7 +55,6 @@
 					<div class="footer-section">
 
 						<a class="logo" href="#"><img src="public/images/logo.png" alt="Logo Image"></a>
-						<p class="copyright">Bona @ 2017. All rights reserved.</p>
 						<ul class="icons">
 							<li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
 							<li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>

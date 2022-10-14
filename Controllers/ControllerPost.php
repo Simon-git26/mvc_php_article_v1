@@ -17,12 +17,16 @@ class ControllerPost {
     public function __construct() {
         if (isset($url) && count($url) < 1) {
             throw new \Exception("Page introuvable", 1);
-        } else {
+            // si jai le param create
+        } elseif (isset($_GET['create'])) {
+            $this->create();
+        }else {
             $this->product();
         }
     }
 
 
+    // Fonction qui va afficher un article
     // Checker le @param id, et appelé la fonction getProduct en lui passant l'id en @param
     // Retourne une view qui va s'appeler viewSinglePost afin de respecter mes nominations de fichier
 
@@ -34,6 +38,15 @@ class ControllerPost {
             $product = $this->_productManager->getProduct($_GET['id']);
             $this->_view = new View('SinglePost');
             $this->_view->generatePost(array('product' => $product));
+        }
+    }
+
+
+    // Fonction pour afficher le formulaire de création d'un product
+    private function create() {
+        if (isset($_GET['create'])) {
+            $this->_view = new View('CreatePost');
+            $this->_view->generateForm();
         }
     }
 }
