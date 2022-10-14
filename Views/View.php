@@ -25,7 +25,7 @@ class View {
     public function generate($data) {
         $content = $this->generateFile($this->_file, $data);
         // Template
-        $view = $this->generateFile('Views/template.php', array('titre' => $this->_titre, 'content' => $content));
+        $view = $this->generateFile('Views/template/template.php', array('titre' => $this->_titre, 'content' => $content));
         echo $view;
     }
 
@@ -36,7 +36,7 @@ class View {
         $content = $this->generateFile($this->_file, $data);
 
         //template
-        $view = $this->generateFile('Views/templateSingle.php', array('titre' => $this->_titre, 'content' => $content));
+        $view = $this->generateFile('Views/template/templateSingle.php', array('titre' => $this->_titre, 'content' => $content));
         echo $view;
     }
 
