@@ -24,7 +24,10 @@ class ControllerPost {
 
 
     // Checker le @param id, et appelé la fonction getProduct en lui passant l'id en @param
-    // Retourne une view qui va s'appeler View SinglePost
+    // Retourne une view qui va s'appeler viewSinglePost afin de respecter mes nominations de fichier
+
+    // Jenvoi une variable $product qui contient tous les champs recuperer donc
+    // id / title / content / date
     private function product() {
         if (isset($_GET['id'])) {
             $this->_productManager = new ProductManager;
