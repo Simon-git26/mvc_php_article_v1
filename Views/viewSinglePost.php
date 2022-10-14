@@ -271,8 +271,7 @@
 							</div><!-- post-info -->
 
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-								ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-								Ut enim ad minim veniam</p>
+								ut labore ad minim veniam</p>
 
 						</div>
 
@@ -296,8 +295,7 @@
 
 							</div><!-- post-info -->
 
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-								ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+							<p>Lorem ipsum dolor sit re magna aliqua. Lorem ipsum dolor sit amet, consectetur
 								Ut enim ad minim veniam</p>
 
 						</div>
@@ -325,8 +323,7 @@
 
 							</div><!-- post-info -->
 
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-								ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+							<p>Lorem ipsum dolor sit ametgna aliqua. Lorem ipsum dolor sit amet, consectetur
 								Ut enim ad minim veniam</p>
 
 						</div>

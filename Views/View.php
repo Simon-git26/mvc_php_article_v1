@@ -31,6 +31,16 @@ class View {
 
 
 
+    // Créer la fonction qui va me permettre de definir le contenu à envoyer
+    public function generatePost($data) {
+        $content = $this->generateFile($this->_file, $data);
+
+        //template
+        $view = $this->generateFile('Views/templateSingle.php', array('titre' => $this->_titre, 'content' => $content));
+        echo $view;
+    }
+
+
 
     // Ma fonction generateFile, elle va checker si la var $file envoyé en param exist
     // Si elle existe alors j'extrait les données de $data

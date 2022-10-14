@@ -5,6 +5,8 @@ require_once 'Views/View.php';
 
 // private $ctrl pour derterminer quel controlleur je veux
 // private $_view pour derterminer quel view je veux
+
+// Le Router "étudie" toutes les requetes et determine a quel controlleur envoyer chaque requêtes
 class Router {
     
     private $ctrl;

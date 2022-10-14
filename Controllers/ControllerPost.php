@@ -33,7 +33,7 @@ class ControllerPost {
             $this->_productManager = new ProductManager;
             $product = $this->_productManager->getProduct($_GET['id']);
             $this->_view = new View('SinglePost');
-            $this->_view->generate(array('product' => $product));
+            $this->_view->generatePost(array('product' => $product));
         }
     }
 }
