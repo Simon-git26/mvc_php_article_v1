@@ -10,7 +10,7 @@ require_once 'Views/View.php';
 class Router {
     
     private $ctrl;
-    private $_view;
+    private $view;
 
 
 

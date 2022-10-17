@@ -20,7 +20,9 @@ class ControllerPost {
             // si jai le param create
         } elseif (isset($_GET['create'])) {
             $this->create();
-        }else {
+        }elseif (isset($_GET['status']) && isset($_GET['status']) == "new") {
+            $this->store();
+        } else {
             $this->product();
         }
     }
@@ -48,5 +50,18 @@ class ControllerPost {
             $this->_view = new View('CreatePost');
             $this->_view->generateForm();
         }
+    }
+
+
+    // Fonction pour stocker un post en base de donnée
+    // Appeler la fonction createProduct
+    // Recuperer tous les post de la base de donnée
+    // Afficher la view home
+    private function store() {
+        $this->_productManager = new ProductManager;
+        $product = $this->_productManager->createProduct();
+        $products = $this->_productManager->getProducts();
+        $this->_view = new View('Home');
+        $this->_view->generate(array('products', $products));
     }
 }

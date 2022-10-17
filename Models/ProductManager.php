@@ -22,4 +22,11 @@ class ProductManager extends Model {
     public function getProduct($id) {
         return $this->getOnePost('articles', 'Product', $id);
     }
+
+
+
+    // Fonction pour crée un post utilisé dans ControllerPost
+    public function createProduct() {
+        return $this->createOnePost('articles', 'Product');
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 
+
 // Le nom de cette classe n'est pas aléatoire, elle vient simplement de mon ProductManager.php, classe que j'ai instancée dans le getAll qui vient de Model
 class Product {
     // Avoir les memes noms que mes champs dans la bdd et passé mes attributs en privée

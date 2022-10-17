@@ -61,7 +61,7 @@ abstract class Model {
         $this->getBdd();
         $var = [];
         
-        $request = self::$_bdd->prepare("SELECT id, title, content, date FROM " .$table. " WHERE id = ?");
+        $request = self::$_bdd->prepare("SELECT id, title, content, DATE_FORMAT(date, '%d/%m/%Y à %Hh%imin%ss') AS date FROM " .$table. " WHERE id = ?");
         $request->execute(array($id));
 
         // $data
@@ -69,6 +69,21 @@ abstract class Model {
             $var[] = new $obj($data);
         }
         return $var;
+        $request->closeCursor();
+    }
+
+
+
+
+    // Recuperer la table dans laquel inserer mes données et l'objet
+    // Requete insertion
+    // Je n'est pas mise ca dans un form car j'utilise la fonction date qui va permettre d'inserer la date actuelle en jour mois année
+    protected function createOnePost($table, $obj) {
+        $this->getBdd();
+
+        $request = self::$_bdd->prepare("INSERT INTO ".$table." (title, content, date) VALUES (?, ?, ?)");
+        $request->execute(array($_POST['title'], $_POST['content'], date("d.m.Y")));
+
         $request->closeCursor();
     }
 }
