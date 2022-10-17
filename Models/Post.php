@@ -2,7 +2,7 @@
 
 
 // Definir le namespace
-// namespace App\Model\Post;
+// namespace App\Models\Post;
 
 // Le nom de cette classe n'est pas aléatoire, elle vient simplement de mon PostManager.php, classe que j'ai instancée dans le getAll qui vient de Model
 class Post {

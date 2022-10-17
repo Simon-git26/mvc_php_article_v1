@@ -35,7 +35,7 @@
 
 			<ul class="main-menu visible-on-click" id="main-menu">
 				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Categories</a></li>
+				<!--<li><a href="#">Categories</a></li>-->
 				<li><a href="post&create">Créer un article</a></li>
 			</ul><!-- main-menu -->
 

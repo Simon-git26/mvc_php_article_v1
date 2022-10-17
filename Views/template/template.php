@@ -14,6 +14,8 @@
 	<link href="public/common-css/ionicons.css" rel="stylesheet">
 	<link href="public/layout-1/css/styles.css" rel="stylesheet">
 	<link href="public/layout-1/css/responsive.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 </head>
 <body>
 	<header>
@@ -23,7 +25,7 @@
 			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
 			<ul class="main-menu visible-on-click" id="main-menu">
 				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Categories</a></li>
+				<!--<li><a href="#">Categories</a></li>-->
 				<!--postécreate-->
 				<li><a href="post&create">Créer un article</a></li>
 			</ul><!-- main-menu -->
@@ -56,40 +58,24 @@
 
 						<a class="logo" href="#"><img src="public/images/logo.png" alt="Logo Image"></a>
 						<ul class="icons">
-							<li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
-							<li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
-							<li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-							<li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
-							<li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
+							<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
 						</ul>
 
 					</div><!-- footer-section -->
 				</div><!-- col-lg-4 col-md-6 -->
 
-				<div class="col-lg-4 col-md-6">
-						<div class="footer-section">
-						<h4 class="title"><b>CATAGORIES</b></h4>
-						<ul>
-							<li><a href="#">BEAUTY</a></li>
-							<li><a href="#">HEALTH</a></li>
-							<li><a href="#">MUSIC</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">SPORT</a></li>
-							<li><a href="#">DESIGN</a></li>
-							<li><a href="#">TRAVEL</a></li>
-						</ul>
-					</div><!-- footer-section -->
-				</div><!-- col-lg-4 col-md-6 -->
 
 				<div class="col-lg-4 col-md-6">
 					<div class="footer-section">
 
-						<h4 class="title"><b>SUBSCRIBE</b></h4>
+						<h4 class="title"><b>S'inscrire'</b></h4>
 						<div class="input-area">
 							<form>
-								<input class="email-input" type="text" placeholder="Enter your email">
-								<button class="submit-btn" type="submit"><i class="icon ion-ios-email-outline"></i></button>
+								<input class="email-input" type="text" placeholder="Entrer votre email">
+								<button class="submit-btn" type="submit"><i class="fas fa-search"></i></button>
 							</form>
 						</div>
 

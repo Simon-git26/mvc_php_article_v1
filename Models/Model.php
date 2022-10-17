@@ -1,5 +1,7 @@
 <?php
 
+// namespace App\Models\Model;
+
 // Créer ma classe parent, classe qui va affecter les autres class + methode communes aux autres models
 abstract class Model {
     private static $_bdd;
@@ -49,7 +51,7 @@ abstract class Model {
 
 
     // Creation de la methode pour recuperer un article en fonction de son id 
-    // utiliser dans ControllerPost
+    // utiliser dans PostController
 
     // Requete dynamique donc petite protection contre les injection sql, je la prepare puis l'execute
     // WHERE id = ? // simplement l'id envoyé en parametre de la fonction

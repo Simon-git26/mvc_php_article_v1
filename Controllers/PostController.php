@@ -1,12 +1,15 @@
 <?php
 
-// Créer mon controlleur qui va afficher UN post
 
+// use App\Models\PostManager\PostManager;
+
+
+// Créer mon controlleur qui va afficher UN post
 // require ma class View
 require_once 'Views/View.php';
 
 // S'occupe d'afficher mes posts sur la page d'accueil
-class ControllerPost {
+class PostController {
 
     private $_postManager;
     private $_view;
@@ -21,7 +24,7 @@ class ControllerPost {
         } elseif (isset($_GET['create'])) {
             $this->create();
         }elseif (isset($_GET['status']) && isset($_GET['status']) == "new") {
-            $this->store();
+            $this->insertPost();
         } else {
             $this->post();
         }
@@ -57,9 +60,10 @@ class ControllerPost {
     // Appeler la fonction createPost
     // Recuperer tous les post de la base de donnée
     // Afficher la view home
-    private function store() {
+    private function insertPost() {
         $this->_postManager = new PostManager;
         $post = $this->_postManager->createPost();
+        // décomposer en deux fonction
         $posts = $this->_postManager->getPosts();
         $this->_view = new View('Home');
         $this->_view->generate(array('posts', $posts));

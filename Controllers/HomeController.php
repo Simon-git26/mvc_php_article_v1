@@ -1,10 +1,17 @@
 <?php
 
+
+// use App\Models\PostManager\PostManager;
+
+//namespace App\Controllers\HomeController;
+
+
 // require ma class View
 require_once 'Views/View.php';
 
-// S'occupe d'afficher mes articles sur la page d'accueil
-class ControllerHome {
+
+// S'occupe d'afficher mes posts sur la page d'accueil
+class HomeController {
 
     private $_postManager;
     private $_view;
@@ -21,7 +28,7 @@ class ControllerHome {
     }
 
 
-    // Recuperer mes articles et les placer dans la variable $posts
+    // Recuperer mes posts et les placer dans la variable $posts
     // Utiliser la method getPosts qui vient de PostManager car j'ai instancié la classe
 
     // Ensuite, recuperer de facon sécuriser ma view pour afficher l'erreur

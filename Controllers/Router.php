@@ -1,5 +1,8 @@
 <?php
 
+// use App\Controllers\HomeController;
+
+
 // require ma class View
 require_once 'Views/View.php';
 
@@ -23,7 +26,6 @@ class Router {
         try {
             spl_autoload_register(function($class) {
                 require_once('Models/'.$class.'.php');
-                //require_once(__DIR__.'Models/'. str_replace('\\', '/', $class).'.php');
             });
 
             // $url
@@ -38,12 +40,17 @@ class Router {
             if (isset($_GET['url'])) {
                 $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));
 
-                $controller = ucfirst(strtolower($url[0]));
+                $name_controller = ucfirst(strtolower($url[0]));
 
-                // En fonction du nom du premier parametre que je recoit, si c'est Home je mettrai ControllerHome fichier donc
+                // En fonction du nom du premier parametre que je recoit, si c'est Home je mettrai HomeController fichier donc
                 // Pour les autres pages, gérer de nouveaux controllers en premier param
                 // Et je retrouve lechemin du controleur voulu
-                $controllerClass = "Controller".$controller;
+
+                // ex: pour mon @param url Home, $controllerClass = HomeController
+                $controllerClass = $name_controller."Controller";
+
+                // Definir dans controllerFile le nom du fichier qui sera utilisé
+                // ex: $controllerFile = Controllers/HomeController.php
                 $controllerFile = "Controllers/".$controllerClass.".php";
 
 
@@ -59,9 +66,9 @@ class Router {
                     throw new \Exception("Page introuvable, le fichier du controller n'existe pas !", 1);
                 }
             } else {
-                // si else, alors je retourne la pahe Home
-                require_once('Controllers/ControllerHome.php');
-                $this->ctrl = new ControllerHome($url);
+                // si else, alors je retourne la page Home
+                require_once('Controllers/HomeController.php');
+                $this->ctrl = new HomeController($url);
             }
         } catch (\Exception $e) {
             $errorMsg = $e->getMessage();

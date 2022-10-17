@@ -1,5 +1,12 @@
 <?php
 
+// namespace App\Models\PostManager;
+
+
+// use App\Models\Model\Model;
+
+
+
 // Crée ma classe qui va heriter de Model et qui va contenir les methodes de récupération sur la bdd
 class PostManager extends Model {
     // Fonction qui va recuperer tous les posts dans la bdd
@@ -15,7 +22,7 @@ class PostManager extends Model {
 
 
 
-    // Fonction utilisé dans mon ControllerPost pour ne récuperer qu'un seul article en fonction de son id
+    // Fonction utilisé dans mon PostController pour ne récuperer qu'un seul article en fonction de son id
     // Retourne une fonction qui s'appelle getOnePost qui prend en @param: TABLE posts, l'objet, et id
 
     // getOnePost qui sera crée dans ma class parent View
@@ -25,7 +32,7 @@ class PostManager extends Model {
 
 
 
-    // Fonction pour crée un post utilisé dans ControllerPost
+    // Fonction pour crée un post utilisé dans PostController
     public function createPost() {
         return $this->createOnePost('posts', 'Post');
     }
