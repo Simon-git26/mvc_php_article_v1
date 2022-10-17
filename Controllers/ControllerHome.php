@@ -6,7 +6,7 @@ require_once 'Views/View.php';
 // S'occupe d'afficher mes articles sur la page d'accueil
 class ControllerHome {
 
-    private $_productManager;
+    private $_postManager;
     private $_view;
 
 
@@ -16,23 +16,23 @@ class ControllerHome {
         if (isset($url) && count($url) > 1) {
             throw new \Exception("Page introuvable", 1);
         } else {
-            $this->products();
+            $this->posts();
         }
     }
 
 
-    // Recuperer mes articles et les placer dans la variable $products
-    // Utiliser la method getProducts qui vient de ProductManager car j'ai instancié la classe
+    // Recuperer mes articles et les placer dans la variable $posts
+    // Utiliser la method getPosts qui vient de PostManager car j'ai instancié la classe
 
     // Ensuite, recuperer de facon sécuriser ma view pour afficher l'erreur
     // En initialisant une instance de class View, je lui passe string Home, et donc grâce à ma class View, 
     // ceci sera appliquer $this->_file = 'Views/view'.$action.'.php';
-    private function products() {
-        $this->_productManager = new ProductManager();
+    private function posts() {
+        $this->_postManager = new PostManager();
 
-        $products = $this->_productManager->getProducts();
+        $posts = $this->_postManager->getPosts();
 
         $this->_view = new View('Home');
-        $this->_view->generate(array('products' => $products));
+        $this->_view->generate(array('posts' => $posts));
     }
 }

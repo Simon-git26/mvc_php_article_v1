@@ -5,10 +5,10 @@
 // require ma class View
 require_once 'Views/View.php';
 
-// S'occupe d'afficher mes products sur la page d'accueil
+// S'occupe d'afficher mes posts sur la page d'accueil
 class ControllerPost {
 
-    private $_productManager;
+    private $_postManager;
     private $_view;
 
 
@@ -23,28 +23,28 @@ class ControllerPost {
         }elseif (isset($_GET['status']) && isset($_GET['status']) == "new") {
             $this->store();
         } else {
-            $this->product();
+            $this->post();
         }
     }
 
 
     // Fonction qui va afficher un article
-    // Checker le @param id, et appelé la fonction getProduct en lui passant l'id en @param
+    // Checker le @param id, et appelé la fonction getPost en lui passant l'id en @param
     // Retourne une view qui va s'appeler viewSinglePost afin de respecter mes nominations de fichier
 
-    // Jenvoi une variable $product qui contient tous les champs recuperer donc
+    // Jenvoi une variable $post qui contient tous les champs recuperer donc
     // id / title / content / date
-    private function product() {
+    private function post() {
         if (isset($_GET['id'])) {
-            $this->_productManager = new ProductManager;
-            $product = $this->_productManager->getProduct($_GET['id']);
+            $this->_postManager = new PostManager;
+            $post = $this->_postManager->getPost($_GET['id']);
             $this->_view = new View('SinglePost');
-            $this->_view->generatePost(array('product' => $product));
+            $this->_view->generatePost(array('post' => $post));
         }
     }
 
 
-    // Fonction pour afficher le formulaire de création d'un product
+    // Fonction pour afficher le formulaire de création d'un post
     private function create() {
         if (isset($_GET['create'])) {
             $this->_view = new View('CreatePost');
@@ -54,14 +54,14 @@ class ControllerPost {
 
 
     // Fonction pour stocker un post en base de donnée
-    // Appeler la fonction createProduct
+    // Appeler la fonction createPost
     // Recuperer tous les post de la base de donnée
     // Afficher la view home
     private function store() {
-        $this->_productManager = new ProductManager;
-        $product = $this->_productManager->createProduct();
-        $products = $this->_productManager->getProducts();
+        $this->_postManager = new PostManager;
+        $post = $this->_postManager->createPost();
+        $posts = $this->_postManager->getPosts();
         $this->_view = new View('Home');
-        $this->_view->generate(array('products', $products));
+        $this->_view->generate(array('posts', $posts));
     }
 }

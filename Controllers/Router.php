@@ -3,6 +3,8 @@
 // require ma class View
 require_once 'Views/View.php';
 
+//use App\Model\Post;
+
 // private $ctrl pour derterminer quel controlleur je veux
 // private $_view pour derterminer quel view je veux
 
@@ -15,12 +17,13 @@ class Router {
 
 
     // Instancie ma classe // Chargement auto des classe du dossier Models
-    // ex: require_once('Models/'.$class.'.php'); peut etre egal à require_once('Models/Product.php');
+    // ex: require_once('Models/'.$class.'.php'); peut etre egal à require_once('Models/Post.php');
     // J'initialise une variable url vide
     public function routeRequest() {
         try {
             spl_autoload_register(function($class) {
                 require_once('Models/'.$class.'.php');
+                //require_once(__DIR__.'Models/'. str_replace('\\', '/', $class).'.php');
             });
 
             // $url

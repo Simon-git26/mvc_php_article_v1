@@ -36,13 +36,13 @@
 							</div><!-- post-info -->
 
                             <!-- Title -->
-							<h3 class="title"><a href="#"><b><?=$product[0]->title()?></b></a></h3>
+							<h3 class="title"><a href="#"><b><?=$post[0]->title()?></b></a></h3>
 
                             <!-- Content -->
-							<p class="para"><?=$product[0]->content()?></p>
+							<p class="para"><?=$post[0]->content()?></p>
 
                             <!-- Content -->
-							<p class="para"><?=$product[0]->date()?></p>
+							<p class="para"><?=$post[0]->date()?></p>
 
 							
 
